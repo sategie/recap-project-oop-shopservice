@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ProductRepo {
 //    Implement ProductRepo class with a list to store products (from the Product record)
-    private final List<Product> products = new ArrayList<Product>();
+    private final List<Product> products = new ArrayList<>();
 
 //    addProduct method
     public void addProduct(Product product) {
