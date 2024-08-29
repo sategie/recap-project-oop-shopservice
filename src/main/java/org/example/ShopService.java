@@ -7,7 +7,7 @@ public class ShopService {
     private final  OrderRepo orderRepo;
 
 //    Constructor
-    public ShopService(ProductRepo productRepo, OrderListRepo orderRepo) {
+    public ShopService(ProductRepo productRepo, OrderRepo orderRepo) {
         this.productRepo = productRepo;
         this.orderRepo = orderRepo;
     }
