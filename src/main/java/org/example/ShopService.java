@@ -15,7 +15,7 @@ public class ShopService {
 //    Method to place a new order
     public void placeNewOrder(String orderId, List<Product> products) {
         for (Product product : products) {
-//            Check if ordered product exists
+//            Check if ordered product does not exist
             if(!productRepo.getAllProducts().contains(product)) {
                 System.out.println("Sorry, requested" + product.name() + "is not available");
                 return;
