@@ -4,18 +4,19 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        ProductRepo stock1 = new ProductRepo();
-        ProductRepo stock2 = new ProductRepo();
-//        ProductRepo stock3 = new ProductRepo();
+       ProductRepo productRepo = new ProductRepo();
+       OrderRepo orderRepo = new OrderListRepo();
 
-        System.out.println(stock1);
-        stock1.addProduct(new Product("Laptop", 200, 200, 20));
-        stock2.addProduct(new Product("Headphones", 120, 400, 10));
+       ShopService shopService = new ShopService(productRepo, orderRepo);
 
-        System.out.println(stock1);
-        System.out.println(stock1.getAllProducts());
+       productRepo.addProduct(new Product("Headphones", 500,200,100));
+       productRepo.addProduct(new Product("Laptop",800,300,50));
 
-        System.out.println(stock2);
+        List<Product> orderProducts = List.of(
+                new Product("Laptop", 200, 200, 20),
+                new Product("Headphones", 120, 400, 10)
+        );
+        shopService.placeNewOrder("Order001", orderProducts);
 
     }
 }

@@ -17,7 +17,7 @@ public class ShopService {
         for (Product product : products) {
 //            Check if ordered product does not exist
             if(!productRepo.getAllProducts().contains(product)) {
-                System.out.println("Sorry, requested" + product.name() + "is not available");
+                System.out.println("Sorry, requested " + product.name() + " is not available");
                 return;
             }
         }
