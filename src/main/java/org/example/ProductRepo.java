@@ -17,7 +17,7 @@ public class ProductRepo {
         products.remove(product);
     }
 
-//    Method to get single product
+//    Method to get single product by its index
     public Product getSingleProduct(int index){
         return products.get(index);
     }
